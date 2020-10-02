@@ -33,3 +33,29 @@ Although there are no strict rules on where Android Studio should be installed o
 
 On versions of Windows with a Start menu, the newly installed Android Studio can be launched from the entry added to that menu during the installation. The executable may be pinned to the task bar for easy access by navigating to the ```Android Studio\bin``` directory, right-clicking on the executable and selecting the Pin to Taskbar menu option. Note that the executable is provided in 32-bit ( studio ) and 64-bit ( studio64 ) executable versions. If you are running a 32-bit system be sure to use the studio executable.
 
+### Installation on macOS
+*comming soon*
+
+### Installation on Linux
+*comming soon*
+
+## The Android Studio Setup Wizard
+The first time that Android Studio is launched after being installed, a dialog will appear version. If you have settings from a previous version and would like to import them into the latest installation, select the appropriate option and location. Alternatively, indicate that you do not need to import any previous settings and click on the **OK** button to proceed. Next, the setup wizard may appear as shown in Figure 2-2 though this dialog does not appear on all platforms:
+
+![Figure 2-2](https://i.ytimg.com/vi/3cYBfuphkuE/maxresdefault.jpg)
+
+<!-- Прежде чем можно будет начать работу по разработке приложения для Android, необходимо настроить компьютерную систему, которая будет выступать в качестве платформы разработки. Это включает в себя ряд шагов, состоящих из установки интегрированной среды разработки Android Studio (IDE), которая также включает в себя Android Software Development Kit (SDK) и OpenJDK Java. В этой главе будут рассмотрены шаги, необходимые для установки необходимых компонентов для разработки приложений Android в системах на базе Windows, macOS и Linux.
+
+## Системные требования
+
+## Скачивание Android Studio
+Большая часть работы по разработке приложений для Android будет выполняться в среде Android Studio. Содержимое и примеры в этом пособии были созданы на основе Android Studio версии 3.6 с использованием Android 8.0 (Oreo) API 26 SDK. Однако Android Studio часто обновляется, поэтому, когда вы читаете этот текст, могла быть выпущена более новая версия. Последнюю версию Android Studio можно загрузить с основной страницы загрузки, которую можно найти по следующему URL-адресу: [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
+
+Устанавливая более новую версию Android Studio, чем 3.6, важно отметить, что между этим пособием и программным обеспечением могут быть небольшие различия. Если эти различия станут проблемой, можно перейти по ссылке [https://developer.android.com/studio/archive](https://developer.android.com/studio/archive) и скачать необходимую версию Android Studio.
+
+## Установка Android Studio
+После загрузки, точные шаги по установке Android Studio различаются в зависимости от операционной системы, в которой выполняется установка.
+
+### Установка под Windows
+
+Найдите загруженный исполняемый файл установки Android Studio (с именем ```android-studio-ide-<version>-windows.exe```) в окне проводника Windows и дважды щелкните по нему, чтобы начать процесс установки, нажав кнопку **Yes** в диалоговом окне **User Account Control**, если оно появится. Как только появится мастер установки Android Studio, пройдите через различные экраны, чтобы настроить установку в соответствии с вашими требованиями с точки зрения расположения файловой системы, в которую должна быть установлена Android Studio, и того, следует ли сделать ее доступной для других пользователей системы. . Когда будет предложено выбрать компоненты для установки, убедитесь, что выбраны все параметры Android Studio и Android Virtual Device. Хотя нет строгих правил относительно того, гдеВ системе должна быть установлена Android Studio, в оставшейся части этой книги предполагается, что установка была выполнена в C: \ Program Files \ Android \ Android Studio и что пакеты Android SDK были установлены в пользовательский AppData \ Local \ Android \ подпапка sdk. После настройки параметров нажмите кнопку «Установить», чтобы начать процесс установки. В версиях Windows с меню «Пуск» недавно установленную Android Studio можно запустить из записи, добавленной в это меню во время установки. Исполняемый файл можно закрепить на панели задач для легкого доступа, перейдя в каталог Android Studio \ bin, щелкнув правой кнопкой мыши исполняемый файл и выбрав пункт меню «Закрепить на панели задач». Обратите внимание, чтоисполняемый файл предоставляется в 32-битной (studio) и 64-битной (studio64) версиях исполняемого файла. Если вы используете 32-битную систему, обязательно используйте исполняемый файл студии. -->

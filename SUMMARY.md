@@ -6,3 +6,4 @@
 <!-- * [3. Создание виртуального устройства](03-creating-avd/README.md) -->
 * [10. Анатомия Android-приложений](10-anatomy-android-application/README.md)
 * [12. Познание жизненного цикла приложений](12-understanding-activity-lifecycles/README.md)
+* [13. Обработка изменений состояния активности](13/README.md)

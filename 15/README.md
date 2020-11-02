@@ -55,3 +55,49 @@ protected void onRestoreInstanceState(Bundle savedInstanceState) {
 
 ![рис. 15-1](assets/15-1.png)
 
+Зная идентификатор, мы можем получить ссылку на виджет из кода активности: 
+```java
+final EditText editText = findViewById (R.id.editText); 
+```
+Теперь мы можем получить текст, содержащийся в editText, с помощью метода *getText()*:
+```java
+CharSequence userText = editText.getText();
+```
+Наконец, мы можем сохранить текст, используя метод *putCharSequence()* объекта *Bundle*, передав ключ (это может быть любое строковое значение, мы объявим его как ```savedText```) и объект userText в качестве второго аргумента: 
+```java
+outState.putCharSequence("savedText", userText); 
+```
+Объединение всего этого дает нам модифицированный метод *onSaveInstanceState()* в файле MainActivity.java:
+```java
+protected void onSaveInstanceState(Bundle outState) { 
+    super.onSaveInstanceState(outState);
+    Log.i(TAG, "onSaveInstanceState"); 
+    
+    final EditText editText = findViewById(R.id.editText); 
+    CharSequence userText = editText.getText(); 
+    outState.putCharSequence("savedText", userText); 
+} 
+```
+Теперь, когда были сделаны шаги по сохранению состояния, необходимо обеспечить его восстановления при необходимости.
+
+## Востановление состояния
+Сохраненное динамическое состояние можно восстановить в тех методах жизненного цикла, которым передается объект *Bundle* в качестве параметра. Это оставляет разработчику выбор: использовать *onCreate()* или *onRestoreInstanceState()*. Используемый метод будет зависеть от характера активности. В случаях, когда состояние лучше востановить после выполнения инициализации активности, более подходит метод *onRestoreInstanceState()*. Мы добавим код в метод *onRestoreInstanceState()* для извлечения сохраненного состояния из *Bundle* с помощью ключа ```savedText```. Затем мы cможем отобразить текст в компоненте editText, используя метод объекта *setText()*:
+```java
+@Override
+protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+    super.onRestoreInstanceState(savedInstanceState);
+    Log.i(TAG, "onRestoreInstanceState");
+
+    final EditText editText = findViewById(R.id.editText);
+    CharSequence userText = savedInstanceState.getCharSequence("savedText");
+    editText.setText(userText);
+}
+```
+
+## Тестирование приложения
+Все, что остается, - это снова собрать и запустить приложение *StateChange*. После запуска коснитесь компонента *EditText* и введите текст, а после поверните устройство в другую ориентацию. Убедившись, что код работает, как ожидалось, закомментируйте вызовы *super.onSaveInstanceState()* и *super.onRestoreInstanceState()* из двух методов, повторно запустите приложение и обратите внимание, что текст все еще сохраняется после ротации устройства. Система сохранения и восстановления по умолчанию была заменена специальной реализацией, что дает возможность динамически и выборочно сохранять и восстанавливать состояние внутри активности.
+
+## Резюме
+Сохранение и восстановление динамического состояния в приложении Android - это просто вопрос написания необходимого кода в соответствующих методах жизненного цикла. Для большинства виджетов пользовательского интерфейса это автоматически обрабатывается суперклассом Activity. В других случаях это обычно состоит из извлечения значений и настроек в методе *onSaveInstanceState()* и сохранения данных в виде пар *key-value* в объекте *Bundle*, переданном активности системой. 
+
+Состояние можно восстановить в методах активности *onCreate()* или *onRestoreInstanceState()*, путем извлечения значений из объекта *Bundle* и обновления активности на основе сохраненных значений.

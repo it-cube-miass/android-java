@@ -1,6 +1,9 @@
 # Table of contents
 
 * [Введение](README.md)
+* [2. Знакомство](02/README.md)
+  * [Форматирование текста](02/formatting-text.md)
+
 <!-- * [1. Setting up an Android Studio Development Environment](01-setting-up-development/README.md) -->
 <!-- * [2. Первое приложение](02-creating-example-app/README.md) -->
 <!-- * [3. Создание виртуального устройства](03-creating-avd/README.md) -->
@@ -11,3 +14,5 @@
 * [15. Сохранение и востановление состояния активности](15/README.md)
 * [16. Познание View, View Groups и Layouts](16/README.md)
 * [17. Руководство по инструменту Layout Editor](17/README.md)
+* [18. Руководство по ConstraintLayout](18/README.md)
+* [26. Руководство по ConstraintLayout](26/README.md)
